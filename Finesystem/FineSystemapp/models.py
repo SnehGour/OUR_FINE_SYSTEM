@@ -14,6 +14,4 @@ class Fine_apply(models.Model):
     Date=models.DateTimeField()
 
     def __str__(self):
-        a=self.Username
-        b=str(self.Fine_Amount)
-        return a+b
+        return str(self.Fine_Amount)
