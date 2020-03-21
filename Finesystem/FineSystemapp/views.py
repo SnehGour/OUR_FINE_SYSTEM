@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from FineSystemapp.forms import NewFineApply
+from .models import *
 # Create your views here.
 def Home(request):
     return render(request,'FineSystemapp/index.html')
@@ -14,3 +15,4 @@ def Fine_Apply(request):
         else:
             print("ERROR FROM INVALID")
     return render(request, 'FineSystemapp/Fine_Apply.html', {'form': form})
+
