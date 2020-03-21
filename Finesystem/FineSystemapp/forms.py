@@ -1,7 +1,7 @@
 from django import forms
-from FineSystemapp.models import Fine_apply
+from FineSystemapp.models import Apply_Fine
 
 class NewFineApply(forms.ModelForm):
     class Meta():
-        model = Fine_apply
+        model = Apply_Fine
         fields = '__all__'

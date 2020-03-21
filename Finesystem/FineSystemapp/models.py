@@ -7,11 +7,21 @@ class login(models.Model):
 
     def __str__(self):
         return self.Username
-class Fine_apply(models.Model):
+
+
+class RULEs(models.Model):
+    Rule=models.CharField(max_length=500)
+    Fine_amount=models.IntegerField()
+    def __str__(self):
+        return self.Rule
+
+class Apply_Fine(models.Model):
     Username = models.ForeignKey(login,on_delete=models.CASCADE)
-    Rule =models.CharField(max_length=265)
+    Rule =models.ForeignKey(RULEs,on_delete=models.CASCADE)
+    id=models.IntegerField(primary_key=True)
     Fine_Amount =models.IntegerField()
     Date=models.DateTimeField()
-
+    
     def __str__(self):
-        return str(self.Fine_Amount)
+        return self.Username
+
