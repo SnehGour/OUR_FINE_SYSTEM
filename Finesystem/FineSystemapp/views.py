@@ -14,3 +14,8 @@ def Fine_Apply(request):
         else:
             print("ERROR FROM INVALID")
     return render(request, 'FineSystemapp/Fine_Apply.html', {'form': form})
+
+
+def myview(request):
+    queryset = ImageModel.objects.all()
+    return render(request, 'template.html' , {'q':queryset})

@@ -30,4 +30,3 @@ class Apply_Fine(models.Model):
 
 
         return a+ '    -    '+b
-
